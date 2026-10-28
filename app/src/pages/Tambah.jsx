@@ -8,9 +8,17 @@ export default function Tambah() {
 
   // e.target.name menentukan field yang diubah, dan ...form mempertahankan field lainnya
   const ubah = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+  // preventDefault mencegah halaman refresh, dan noValidate menonaktifkan validasi bawaan browser
+  const simpan = (e) => {
+    e.preventDefault();
+    console.log("Data yang akan disimpan:", form);
+  };
+
   return (
     // htmlFor harus sama dengan id input agar label terhubung dengan kotaknya
-    <form>
+    // onSubmit pada form agar klik Enter juga nyimpan
+    <form onSubmit={simpan} noValidate>
       <h1>Tambah Tugas</h1>
       <label htmlFor="judul">Judul</label>
       <input id="judul" name="judul" value={form.judul} onChange={ubah} />
