@@ -5,7 +5,7 @@ import "./Tambah.css";
 
 const AWAL = {
   judul: "",
-  kategori: "kekuatan",
+  kategori: "Kekuatan",
   tanggal: "",
   durasi: "",
   kalori: "",

@@ -1,3 +1,29 @@
 export default function Statistik() {
-  return <h1>Statistik</h1>;
+  return (
+    <section>
+      <h1>Statistik</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Kategori</th>
+            <th>Jumlah</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kekuatan</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>Kardio</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Fleksibilitas</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  );
 }
