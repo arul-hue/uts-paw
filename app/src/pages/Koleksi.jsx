@@ -2,6 +2,8 @@ import { useState } from "react";
 import useKoleksi from "../hooks/useKoleksi.js";
 import KotakPencarian from "../components/KotakPencarian.jsx";
 import KartuItem from "../components/KartuItem.jsx";
+import PesanStatus from "../components/PesanStatus.jsx";
+import PilihKategori from "../components/PilihKategori.jsx";
 
 // State cari dikelola di halaman Koleksi dan diteruskan ke KotakPencarian melalui props
 export default function Koleksi() {
@@ -9,9 +11,7 @@ export default function Koleksi() {
   const [cari, setCari] = useState("");
   const [kategori, setKategori] = useState("Semua");
 
-  // Return awal menampilkan pesan loading atau error sebelum daftar dirender
-  if (loading) return <p>Memuat data...</p>;
-  if (error) return <p role="alert">Gagal memuat: {error}</p>;
+  if (loading || error) return <PesanStatus loading={loading} error={error} />;
 
   // Kategori unik dibuat dengan Set, lalu ditambahkan pilihan "Semua"
   const daftarKategori = [
@@ -31,15 +31,11 @@ export default function Koleksi() {
       <h1>Koleksi</h1>
       <div className="alat-koleksi">
         <KotakPencarian nilai={cari} onUbah={setCari} />
-        <select
-          aria-label="Kategori"
-          value={kategori}
-          onChange={(e) => setKategori(e.target.value)}
-        >
-          {daftarKategori.map((k) => (
-            <option key={k}>{k}</option>
-          ))}
-        </select>
+        <PilihKategori
+          daftar={daftarKategori}
+          nilai={kategori}
+          onUbah={setKategori}
+        />
       </div>
       {tampil.length === 0 ? (
         <p>Tidak ada item yang cocok.</p>
