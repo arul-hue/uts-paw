@@ -25,10 +25,12 @@ export default function Detail() {
       <dl>
         <dt>Kategori</dt>
         <dd>{item.kategori}</dd>
-        <dt>Tenggat</dt>
-        <dd>{item.tenggat}</dd>
-        <dt>Prioritas</dt>
-        <dd>{item.prioritas}</dd>
+        <dt>Tanggal</dt>
+        <dd>{item.tanggal}</dd>
+        <dt>Durasi</dt>
+        <dd>{item.durasi} menit</dd>
+        <dt>Kalori</dt>
+        <dd>{item.kalori}</dd>
       </dl>
       <Link to="/koleksi">Kembali</Link>
     </section>
