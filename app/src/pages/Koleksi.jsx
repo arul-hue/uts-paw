@@ -7,14 +7,23 @@ import KartuItem from "../components/KartuItem.jsx";
 export default function Koleksi() {
   const { items, loading, error } = useKoleksi();
   const [cari, setCari] = useState("");
+  const [kategori, setKategori] = useState("Semua");
 
   // Return awal menampilkan pesan loading atau error sebelum daftar dirender
   if (loading) return <p>Memuat data...</p>;
   if (error) return <p role="alert">Gagal memuat: {error}</p>;
 
-  // Filter dan toLowerCase memungkinkan pencarian tanpa membedakan huruf besar dan kecil.
-  const tampil = items.filter((item) =>
-    item.judul.toLowerCase().includes(cari.toLowerCase()),
+  // Kategori unik dibuat dengan Set, lalu ditambahkan pilihan "Semua"
+  const daftarKategori = [
+    "Semua",
+    ...new Set(items.map((item) => item.kategori)),
+  ];
+  // Filter menampilkan item yang judul dan kategorinya sesuai pilihan
+  const tampil = items.filter(
+    (item) =>
+      // Filter dan toLowerCase memungkinkan pencarian tanpa membedakan huruf besar dan kecil
+      item.judul.toLowerCase().includes(cari.toLowerCase()) &&
+      (kategori === "Semua" || item.kategori === kategori),
   );
 
   return (
@@ -22,6 +31,15 @@ export default function Koleksi() {
       <h1>Koleksi</h1>
       <div className="alat-koleksi">
         <KotakPencarian nilai={cari} onUbah={setCari} />
+        <select
+          aria-label="Kategori"
+          value={kategori}
+          onChange={(e) => setKategori(e.target.value)}
+        >
+          {daftarKategori.map((k) => (
+            <option key={k}>{k}</option>
+          ))}
+        </select>
       </div>
       {tampil.length === 0 ? (
         <p>Tidak ada item yang cocok.</p>
