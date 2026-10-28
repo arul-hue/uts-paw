@@ -5,7 +5,6 @@ import KartuItem from "../components/KartuItem.jsx";
 import PesanStatus from "../components/PesanStatus.jsx";
 import PilihKategori from "../components/PilihKategori.jsx";
 
-// state cari dikelola di halaman Koleksi dan diteruskan ke KotakPencarian melalui props
 export default function Koleksi() {
   const { items, loading, error } = useKoleksi();
   const [cari, setCari] = useState("");
@@ -18,7 +17,6 @@ export default function Koleksi() {
     "Semua",
     ...new Set(items.map((item) => item.kategori)),
   ];
-  // filter menampilkan item yang judul dan kategorinya sesuai pilihan
   const tampil = items.filter(
     (item) =>
       // filter dan toLowerCase memungkinkan pencarian tanpa membedakan huruf besar dan kecil
@@ -42,7 +40,6 @@ export default function Koleksi() {
       ) : (
         <div className="daftar-kartu">
           {tampil.map((item) => (
-            // data item dikirim melalui props dan diambil dengan destructuring
             <KartuItem key={item.id} item={item} />
           ))}
         </div>

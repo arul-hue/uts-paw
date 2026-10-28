@@ -6,10 +6,8 @@ export default function Detail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { items, loading, hapus } = useKoleksi();
-  // string menyamakan tipe id agar bisa dibandingkan dengan data
   const item = items.find((i) => String(i.id) === id);
 
-  // jika item tidak ditemukan, akan menampilkan pesan dan tautan kembali tanpa menulis 404
   if (loading) return <p>Memuat data...</p>;
   if (!item) {
     return (
@@ -28,7 +26,6 @@ export default function Detail() {
     }
   };
 
-  // dl, dt, dan dd dipakai untuk menampilkan label dan nilai sesuai tema
   return (
     <section>
       <h1>{item.judul}</h1>
