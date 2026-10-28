@@ -1,4 +1,5 @@
 import useKoleksi from "../hooks/useKoleksi.js";
+import KartuItem from "../components/KartuItem.jsx";
 
 export default function Koleksi() {
   const { items, loading, error } = useKoleksi();
@@ -10,12 +11,12 @@ export default function Koleksi() {
   return (
     <section>
       <h1>Koleksi</h1>
-      <ul>
-        {/*map membuat elemen li untuk setiap item, sedangkan key menggunakan id unik*/}
+      <div className="daftar-kartu">
         {items.map((item) => (
-          <li key={item.id}>{item.judul}</li>
+          // Data item dikirim melalui props dan diambil dengan destructuring.
+          <KartuItem key={item.id} item={item} />
         ))}
-      </ul>
+      </div>
     </section>
   );
 }
