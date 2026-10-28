@@ -2,28 +2,30 @@ import { useState } from "react";
 
 const AWAL = { judul: "", kategori: "Kuliah" };
 
-// semua field disimpan dalam satu objek form dengan nilai awal dari AWAL
 export default function Tambah() {
   const [form, setForm] = useState(AWAL);
+  const [galat, setGalat] = useState("");
 
-  // e.target.name menentukan field yang diubah, dan ...form mempertahankan field lainnya
   const ubah = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  // preventDefault mencegah halaman refresh, dan noValidate menonaktifkan validasi bawaan browser
   const simpan = (e) => {
     e.preventDefault();
+    if (form.judul.trim().length < 3) {
+      setGalat("Judul wajib diisi, minimal 3 karakter.");
+      return; // return menghentikan proses penyimpanan kalau judul tidak valid
+    }
+    setGalat("");
     console.log("Data yang akan disimpan:", form);
   };
 
   return (
-    // htmlFor harus sama dengan id input agar label terhubung dengan kotaknya
-    // onSubmit pada form agar klik Enter juga nyimpan
     <form onSubmit={simpan} noValidate>
       <h1>Tambah Tugas</h1>
       <label htmlFor="judul">Judul</label>
       <input id="judul" name="judul" value={form.judul} onChange={ubah} />
+      {galat && <p role="alert">{galat}</p>}{" "}
+      {/*pesan tampil kalo galat tidak kosong */}
       <label htmlFor="kategori">Kategori</label>
-      {/*value menampilkan nilai state, onChange mengubah*/}
       <select
         id="kategori"
         name="kategori"
@@ -35,8 +37,6 @@ export default function Tambah() {
         <option>Fleksibilitas</option>
       </select>
       <button type="submit">Simpan</button>
-      {/*bagian dibawah buat melihat state*/}
-      <p>Isi state saat ini: {JSON.stringify(form)}</p>
     </form>
   );
 }
