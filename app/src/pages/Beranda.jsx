@@ -16,7 +16,7 @@ export default function Beranda() {
         <p>Memuat Daftar...</p> // Saat loading, tampilnya pesan memuat, bukan angka 0
       ) : (
         <p>
-          ada {items.length} latihan olahraga dengan {jumlahKategori} kategori.
+          Ada {items.length} latihan olahraga dengan {jumlahKategori} kategori.
         </p>
       )}
       {/*tag Link berpindah halaman tanpa memuat ulang aplikasi*/}

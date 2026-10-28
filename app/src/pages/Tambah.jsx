@@ -1,3 +1,7 @@
 export default function Tambah() {
-  return <h1>Tambah</h1>;
+  return (
+    <section>
+      <h1>Tambah Tugas</h1>
+    </section>
+  );
 }
