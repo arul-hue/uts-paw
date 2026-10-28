@@ -5,7 +5,7 @@ export default function KartuItem({ item }) {
   return (
     <article className="kartu">
       <h3>
-        {/*Tautan detail menyertakan id item sebagai parameter URL*/}
+        {/*tag link menggunakan id sebagai parameter URL*/}
         <Link to={`/koleksi/${id}`}>{judul}</Link>
       </h3>
       <p>

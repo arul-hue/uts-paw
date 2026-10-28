@@ -1,15 +1,15 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import useKoleksi from "../hooks/useKoleksi.js";
 
-// Semua hook dipanggil di awal komponen sebelum return bersyarat
+// semua hook dipanggil di awal komponen sebelum return bersyarat
 export default function Detail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { items, loading, hapus } = useKoleksi();
-  // String menyamakan tipe id agar bisa dibandingkan dengan data
+  // string menyamakan tipe id agar bisa dibandingkan dengan data
   const item = items.find((i) => String(i.id) === id);
 
-  // Jika item tidak ditemukan, tampilkan pesan dan tautan kembali tanpa menulis 404
+  // jika item tidak ditemukan, akan menampilkan pesan dan tautan kembali tanpa menulis 404
   if (loading) return <p>Memuat data...</p>;
   if (!item) {
     return (
@@ -20,7 +20,7 @@ export default function Detail() {
     );
   }
 
-  // Jika pengguna memilih OK pada confirm, item dihapus lalu diarahkan ke halaman Koleksi
+  // kalau pengguna memilih OK pada confirm, item dihapus lalu diarahkan ke halaman Koleksi
   const konfirmasiHapus = () => {
     if (window.confirm(`Hapus "${item.judul}"?`)) {
       hapus(item.id);
@@ -28,7 +28,7 @@ export default function Detail() {
     }
   };
 
-  // dl, dt, dan dd digunakan untuk menampilkan label dan nilai sesuai tema
+  // dl, dt, dan dd dipakai untuk menampilkan label dan nilai sesuai tema
   return (
     <section>
       <h1>{item.judul}</h1>

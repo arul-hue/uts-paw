@@ -1,4 +1,4 @@
-// Dropdown kategori, nilai terpilih masuk lewat props, perubahan dikirim lewat onUbah
+// nilai yang dipilih masuk lewat props, perubahan diterusin lewat onUbah
 export default function PilihKategori({ daftar, nilai, onUbah }) {
   return (
     <select
