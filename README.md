@@ -4,10 +4,10 @@ Repo induk Ujian Tengah Semester Pengembangan Aplikasi Web, Informatika ITERA, s
 
 **Soal, contoh kode, panduan, rubrik, ketentuan, dan materi: https://uts-paw.mhabibalgifari.web.id**
 
-| Kelas | Dibuka | Tenggat |
-|---|---|---|
-| RA | Selasa, 27 Oktober 2026 pukul 08.00 WIB | Jumat, 30 Oktober 2026 pukul 23.59 WIB |
-| RB | Kamis, 29 Oktober 2026 pukul 13.00 WIB | Minggu, 1 November 2026 pukul 23.59 WIB |
+| Kelas | Dibuka                                  | Tenggat                                 |
+| ----- | --------------------------------------- | --------------------------------------- |
+| RA    | Selasa, 27 Oktober 2026 pukul 08.00 WIB | Jumat, 30 Oktober 2026 pukul 23.59 WIB  |
+| RB    | Kamis, 29 Oktober 2026 pukul 13.00 WIB  | Minggu, 1 November 2026 pukul 23.59 WIB |
 
 Hanya mahasiswa yang terdaftar di data kelas RA dan RB yang dinilai. AI generatif dilarang; baca [Ketentuan](https://uts-paw.mhabibalgifari.web.id/ketentuan) sebelum mulai.
 
@@ -47,14 +47,14 @@ Panduan lengkap beserta solusi kendala umum ada di halaman [Panduan](https://uts
 
 ## Isi repo
 
-| Folder | Isi | Boleh diubah mahasiswa |
-|---|---|---|
-| `app/` | Starter aplikasi React yang kamu kerjakan | Ya |
-| `portal/` | Situs soal dan panduan (domain ujian) | Tidak |
-| `grader/` | Pemeriksa rubrik otomatis | Tidak |
-| `shared/uts.json` | Jadwal kelas, tema, rubrik, dan pemeriksaan integritas | Tidak |
-| `shared/contoh/` | Contoh kode yang ditampilkan di halaman Contoh Kode | Tidak |
-| `.github/workflows/` | Build, deploy, dan cek otomatis | Tidak |
+| Folder               | Isi                                                    | Boleh diubah mahasiswa |
+| -------------------- | ------------------------------------------------------ | ---------------------- |
+| `app/`               | Starter aplikasi React yang kamu kerjakan              | Ya                     |
+| `portal/`            | Situs soal dan panduan (domain ujian)                  | Tidak                  |
+| `grader/`            | Pemeriksa rubrik otomatis                              | Tidak                  |
+| `shared/uts.json`    | Jadwal kelas, tema, rubrik, dan pemeriksaan integritas | Tidak                  |
+| `shared/contoh/`     | Contoh kode yang ditampilkan di halaman Contoh Kode    | Tidak                  |
+| `.github/workflows/` | Build, deploy, dan cek otomatis                        | Tidak                  |
 
 Penilaian akhir selalu memakai `grader/` dan `shared/` versi repo induk, jadi mengubahnya di fork tidak berpengaruh.
 
@@ -65,11 +65,11 @@ Ganti seluruh isi berkas ini dengan dokumentasi aplikasimu (butir rubrik A4). Ke
 ```markdown
 # Nama Aplikasi
 
-Nama: ...
-NIM: ...
-Kelas: ...
-Tema: ...
-Deployment: https://USERNAME.github.io/uts-paw/
+Nama: Syahrul Afwan
+NIM: 124140096
+Kelas: RA
+Tema: Jurnal Latihan Olahraga
+Deployment: https://arul-hue.github.io/uts-paw/
 
 ![Tangkapan layar beranda](docs/beranda.png)
 
