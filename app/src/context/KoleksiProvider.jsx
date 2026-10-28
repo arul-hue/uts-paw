@@ -11,6 +11,7 @@ export function KoleksiProvider({ children }) {
     if (items !== null) return;
     async function muat() {
       try {
+        // Data JSON diambil jika localStorage masih kosong, loading menandai proses dan error menyimpan pesan kegagalan
         const res = await fetch(`${import.meta.env.BASE_URL}data/koleksi.json`);
         if (!res.ok)
           throw new Error(`Gagal memuat data (status ${res.status})`);
@@ -24,6 +25,7 @@ export function KoleksiProvider({ children }) {
     muat();
   }, [items, setItems]);
 
+  // Fungsi tambah dan hapus mengubah daftar yang otomatis tersimpan di localStorage
   const tambah = (item) =>
     setItems((lama) => [...(lama ?? []), { ...item, id: String(Date.now()) }]);
   const hapus = (id) =>

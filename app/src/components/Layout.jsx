@@ -15,6 +15,7 @@ export default function Layout() {
       <header className="kepala">
         <strong>Jurnal Latihan Olahraga</strong>
         <nav className="menu">
+          {/*NavLink memberi kelas active pada menu yang dibuka, sedangkan end membatasi status aktif Beranda*/}
           {MENU.map(({ ke, label }) => (
             <NavLink key={ke} to={ke} end={ke === "/"}>
               {label}
@@ -23,7 +24,7 @@ export default function Layout() {
         </nav>
       </header>
       <main className="isi">
-        <Outlet />
+        <Outlet /> {/*Outlet menampilkan isi halaman sesuai rute yang dipilih*/}
       </main>
       <footer className="kaki">
         Ujian Tengah Semester Pengembangan Aplikasi Web
