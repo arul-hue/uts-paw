@@ -9,8 +9,14 @@ export default function Beranda() {
   const jumlahKategori = new Set(items.map((item) => item.kategori)).size;
 
   return (
-    <section>
-      <h1>Beranda</h1>
+    <section className="beranda">
+      <h1>
+        Train Smarter.
+        <br />
+        Move Better.
+        <br />
+        Life Healthier.
+      </h1>
       <p>{mahasiswa.tema}</p>
       {loading ? (
         <p>Memuat Daftar...</p> // saat loading, tampilnya pesan memuat, bukan angka 0
