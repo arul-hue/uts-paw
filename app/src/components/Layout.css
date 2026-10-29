@@ -16,6 +16,13 @@
   gap: 1rem;
 }
 
+.menu a {
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  color: #1f2328;
+  text-decoration: none;
+}
+
 .menu a.active {
   font-weight: 600;
 }
@@ -91,6 +98,19 @@
   border: 1px solid #c4c4c4;
   border-radius: 6px;
   font: inherit;
+}
+
+/* psudeo clasa */
+.kartu:hover {
+  border-color: #0969da;
+}
+
+.menu a:hover {
+  background-color: #cccaca;
+}
+
+.isi dt::after {
+  content: " :";
 }
 
 @media (max-width: 768px) {

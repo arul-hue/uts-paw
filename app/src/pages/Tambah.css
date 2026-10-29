@@ -36,6 +36,18 @@
   cursor: pointer;
 }
 
+/*selector id*/
+
+#judul,
+#tanggal,
+#kalori,
+#durasi,
+#kategori,
+#judul {
+  cursor: pointer;
+}
+
+/* media */
 @media (max-width: 480px) {
   .formulir button {
     align-self: stretch;

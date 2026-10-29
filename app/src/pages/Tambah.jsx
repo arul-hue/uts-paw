@@ -32,7 +32,7 @@ export default function Tambah() {
   return (
     // setiap field tema memakai label dan input yang terhubung, dan nilai awal di AWAL
     <form className="formulir" onSubmit={simpan} noValidate>
-      <h1>Tambah Tugas</h1>
+      <h1>Tambah Latihan</h1>
       <label htmlFor="judul">Judul</label>
       <input id="judul" name="judul" value={form.judul} onChange={ubah} />
       {galat && <p role="alert">{galat}</p>}{" "}
