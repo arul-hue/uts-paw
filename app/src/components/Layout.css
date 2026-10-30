@@ -84,6 +84,12 @@
   padding: 1rem;
   border: 1px solid #dcdcdc;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.kartu a {
+  text-decoration: none;
+  color: #0969da;
 }
 
 .kartu h3 {

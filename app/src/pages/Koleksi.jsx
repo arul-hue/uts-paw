@@ -4,6 +4,7 @@ import KotakPencarian from "../components/KotakPencarian.jsx";
 import KartuItem from "../components/KartuItem.jsx";
 import PesanStatus from "../components/PesanStatus.jsx";
 import PilihKategori from "../components/PilihKategori.jsx";
+import "./Koleksi.css";
 
 export default function Koleksi() {
   const { items, loading, error } = useKoleksi();
@@ -25,8 +26,8 @@ export default function Koleksi() {
   );
 
   return (
-    <section>
-      <h1>Koleksi</h1>
+    <section className="hero-koleksi">
+      <h1 className="judul-koleksi">Kumpulan Latihan</h1>
       <div className="alat-koleksi">
         <KotakPencarian nilai={cari} onUbah={setCari} />
         <PilihKategori
@@ -35,6 +36,9 @@ export default function Koleksi() {
           onUbah={setKategori}
         />
       </div>
+      <p>
+        Menampilkan {tampil.length} dari {items.length} latihan
+      </p>
       {tampil.length === 0 ? (
         <p>Tidak ada item yang cocok.</p>
       ) : (

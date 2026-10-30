@@ -1,0 +1,26 @@
+.detail {
+  border: 2px solid #0969da;
+  max-width: 400px;
+  padding: 8px 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+section .button-hapus {
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+}
+
+.aksi a {
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+section .judul-detail {
+  font-size: 2rem;
+}

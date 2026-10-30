@@ -1,5 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import useKoleksi from "../hooks/useKoleksi.js";
+import "./Detail.css";
 
 // semua hook dipanggil di awal komponen sebelum return bersyarat
 export default function Detail() {
@@ -28,8 +29,8 @@ export default function Detail() {
 
   return (
     <section>
-      <h1>{item.judul}</h1>
-      <dl>
+      <h1 className="judul-detail">{item.judul}</h1>
+      <dl className="detail">
         <dt>Kategori</dt>
         <dd>{item.kategori}</dd>
         <dt>Tanggal</dt>
@@ -40,10 +41,16 @@ export default function Detail() {
         <dd>{item.kalori} kkal</dd>
       </dl>
       <div className="aksi">
-        <button type="button" onClick={konfirmasiHapus}>
+        <button
+          className="button-hapus"
+          type="button"
+          onClick={konfirmasiHapus}
+        >
           Hapus
         </button>
-        <Link to="/koleksi">Kembali</Link>
+        <Link className="button-kembali" to="/koleksi">
+          Kembali &gt;&gt;
+        </Link>
       </div>
     </section>
   );
