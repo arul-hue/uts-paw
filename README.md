@@ -25,17 +25,19 @@
 
 ## Menjalankan secara lokal
 
+```
 cd app
 npm install
 npm run dev
+```
 
 ## Konsep React yang dipakai
 
-- Komponen dan props (`KartuItem`, `KotakPencarian`, `PilihKategori`)
-- `useState` untuk form terkontrol, pencarian, dan filter
-- `useEffect` untuk memuat data dari `koleksi.json`
-- Context (`KoleksiProvider`) dan custom hook (`useKoleksi`, `useLocalStorage`)
-- React Router: `NavLink`, `Link`, `useParams`, `useNavigate`
+- Komponen dan props (KartuItem, KotakPencarian, PilihKategori)
+- useState untuk form terkontrol, pencarian, dan filter
+- useEffect untuk memuat data dari koleksi.json
+- Context (KoleksiProvider) dan custom hook (useKoleksi, useLocalStorage)
+- React Router: NavLink, Link, useParams, useNavigate
 - Conditional rendering untuk status loading, error, dan data kosong
 - Data disimpan di localStorage agar tetap ada setelah refresh
 - Testing dengan Vitest dan Testing Library
