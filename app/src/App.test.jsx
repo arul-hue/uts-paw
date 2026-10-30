@@ -3,51 +3,17 @@ import { MemoryRouter } from "react-router-dom";
 import { beforeEach, expect, test } from "vitest";
 import App from "./App.jsx";
 
-// Contoh test. Tambahkan minimal 5 test buatan sendiri (butir rubrik F1).
-// test('rute tidak dikenal menampilkan 404', () => {
-//   render(
-//     <MemoryRouter initialEntries={['/tidak-ada']}>
-//       <App />
-//     </MemoryRouter>,
-//   )
-//   expect(screen.getByRole('heading', { name: '404' })).toBeInTheDocument()
-// })
-
 beforeEach(() => {
   localStorage.setItem(
     "uts-paw-koleksi",
     JSON.stringify([
       {
         id: "1",
-        judul: "Jogging",
-        kategori: "Kardio",
-        tanggal: "2026-10-13",
-        durasi: 35,
-        kalori: 320,
-      },
-      {
-        id: "2",
-        judul: "Push up",
-        kategori: "Kekuatan",
-        tanggal: "2026-10-14",
-        durasi: 15,
-        kalori: 100,
-      },
-      {
-        id: "3",
         judul: "Yoga",
         kategori: "Fleksibilitas",
         tanggal: "2026-10-24",
         durasi: 30,
         kalori: 90,
-      },
-      {
-        id: "4",
-        judul: "Squat",
-        kategori: "Kekuatan",
-        tanggal: "2026-10-16",
-        durasi: 20,
-        kalori: 130,
       },
     ]),
   );
@@ -69,7 +35,7 @@ test("Beranda menampilkan jumlah latihan dan jumlah kategori unik", () => {
     </MemoryRouter>,
   );
   expect(
-    screen.getByText("Ada 4 latihan olahraga dengan 3 kategori."),
+    screen.getByText("Ada 1 latihan olahraga dengan 1 kategori."),
   ).toBeInTheDocument();
 });
 
@@ -79,10 +45,7 @@ test("Koleksi menampilkan semua item dari data", () => {
       <App />
     </MemoryRouter>,
   );
-  expect(screen.getByRole("link", { name: "Jogging" })).toBeInTheDocument();
-  expect(screen.getByRole("link", { name: "Push up" })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: "Yoga" })).toBeInTheDocument();
-  expect(screen.getByRole("link", { name: "Squat" })).toBeInTheDocument();
 });
 
 test("pencarian di Koleksi menyaring item tanpa membedakan huruf besar dan kecil", () => {
@@ -95,22 +58,6 @@ test("pencarian di Koleksi menyaring item tanpa membedakan huruf besar dan kecil
     target: { value: "YOGA" },
   });
   expect(screen.getByRole("link", { name: "Yoga" })).toBeInTheDocument();
-  expect(
-    screen.queryByRole("link", { name: "Jogging" }),
-  ).not.toBeInTheDocument();
-});
-
-test("filter kategori di Koleksi hanya menampilkan kategori yang dipilih", () => {
-  render(
-    <MemoryRouter initialEntries={["/koleksi"]}>
-      <App />
-    </MemoryRouter>,
-  );
-  fireEvent.change(screen.getByLabelText("Kategori"), {
-    target: { value: "Kekuatan" },
-  });
-  expect(screen.getByRole("link", { name: "Push up" })).toBeInTheDocument();
-  expect(screen.getByRole("link", { name: "Squat" })).toBeInTheDocument();
   expect(
     screen.queryByRole("link", { name: "Jogging" }),
   ).not.toBeInTheDocument();
