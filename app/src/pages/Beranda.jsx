@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import mahasiswa from "../../mahasiswa.json";
 import useKoleksi from "../hooks/useKoleksi";
+import "./Beranda.css";
 
 export default function Beranda() {
   const { items, loading } = useKoleksi();
@@ -9,24 +10,26 @@ export default function Beranda() {
   const jumlahKategori = new Set(items.map((item) => item.kategori)).size;
 
   return (
-    <section className="beranda">
+    <section className="hero">
       <h1>
-        Train Smarter.
+        Train <span>Smarter.</span>
         <br />
-        Move Better.
+        Move <span>Better.</span>
         <br />
-        Life Healthier.
+        Life <span>Healthier.</span>
       </h1>
-      <p>{mahasiswa.tema}</p>
+      <p className="tema">Tema: {mahasiswa.tema}</p>
       {loading ? (
         <p>Memuat Daftar...</p> // saat loading, tampilnya pesan memuat, bukan angka 0
       ) : (
-        <p>
+        <p className="deskripsi">
           Ada {items.length} latihan olahraga dengan {jumlahKategori} kategori.
         </p>
       )}
       {/*tag Link berpindah halaman tanpa memuat ulang aplikasi*/}
-      <Link to="/koleksi">Lihat latihan lainya</Link>
+      <Link to="/koleksi" className="tombol">
+        Latihan Selengkapnya
+      </Link>
     </section>
   );
 }

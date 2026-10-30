@@ -13,7 +13,7 @@ export default function Layout() {
   return (
     <div className="kerangka">
       <header className="kepala">
-        <strong>Jurnal Latihan Olahraga</strong>
+        <strong className="judul nav">Jurnal Latihan Olahraga</strong>
         <nav className="menu">
           {/*NavLink memberi kelas active pada menu yang dibuka, dan end ngebatesin status aktif Beranda*/}
           {MENU.map(({ ke, label }) => (

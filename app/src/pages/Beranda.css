@@ -1,0 +1,63 @@
+.hero {
+  color: white;
+}
+
+.hero {
+  padding-top: 50px;
+  padding-left: 170px;
+}
+
+section h1 {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+section span {
+  color: #0969da;
+}
+
+section .tema {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+section .deskripsi {
+  margin-bottom: 4rem;
+}
+
+section .tombol {
+  border: 1px solid #0969da;
+  padding: 9px 13px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: #0969da;
+}
+
+section .tombol:hover {
+  background-color: white;
+  color: #0969da;
+}
+
+.isi:has(.hero) {
+  max-width: none;
+  padding: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../assets/beranda.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 24px 70px;
+    margin: 0;
+    transform: none;
+  }
+
+  section h1 {
+    font-size: 35px;
+  }
+}

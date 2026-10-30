@@ -9,10 +9,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
+  background-color: #0969da;
 }
 
 .menu {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -21,14 +23,22 @@
   border-radius: 6px;
   color: #1f2328;
   text-decoration: none;
+  color: white;
 }
 
 .menu a.active {
   font-weight: 600;
 }
 
+.judul {
+  color: white;
+}
+
 .isi {
+  box-sizing: border-box;
   flex: 1;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
@@ -40,6 +50,7 @@
   border-top: 1px solid #dcdcdc;
   color: #57606a;
   font-size: 0.9rem;
+  background-color: white;
 }
 
 .aksi {
@@ -106,7 +117,8 @@
 }
 
 .menu a:hover {
-  background-color: #cccaca;
+  background-color: white;
+  color: #0969da;
 }
 
 .isi dt::after {
