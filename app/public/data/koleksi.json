@@ -3,7 +3,7 @@
     "id": "1",
     "judul": "Jogging",
     "kategori": "Kardio",
-    "tanggal": "2026-10-13",
+    "tanggal": "13 Oktober 2026",
     "durasi": 35,
     "kalori": 320
   },
@@ -11,7 +11,7 @@
     "id": "2",
     "judul": "Push up",
     "kategori": "Kekuatan",
-    "tanggal": "2026-10-14",
+    "tanggal": "14 Oktober 2026",
     "durasi": 15,
     "kalori": 100
   },
@@ -19,7 +19,7 @@
     "id": "3",
     "judul": "Bersepeda",
     "kategori": "Kardio",
-    "tanggal": "2026-10-15",
+    "tanggal": "15 Oktober 2026",
     "durasi": 45,
     "kalori": 280
   },
@@ -27,7 +27,7 @@
     "id": "4",
     "judul": "Squat",
     "kategori": "Kekuatan",
-    "tanggal": "2026-10-16",
+    "tanggal": "16 Oktober 2026",
     "durasi": 20,
     "kalori": 130
   },
@@ -35,7 +35,7 @@
     "id": "5",
     "judul": "Berenang",
     "kategori": "Kardio",
-    "tanggal": "2026-10-17",
+    "tanggal": "17 Oktober 2026",
     "durasi": 40,
     "kalori": 350
   },
@@ -43,7 +43,7 @@
     "id": "6",
     "judul": "Plank",
     "kategori": "Kekuatan",
-    "tanggal": "2026-10-18",
+    "tanggal": "18 Oktober 2026",
     "durasi": 10,
     "kalori": 50
   },
@@ -51,7 +51,7 @@
     "id": "7",
     "judul": "Lompat tali",
     "kategori": "Kardio",
-    "tanggal": "2026-10-19",
+    "tanggal": "19 Oktober 2026",
     "durasi": 20,
     "kalori": 260
   },
@@ -59,7 +59,7 @@
     "id": "8",
     "judul": "Sit up",
     "kategori": "Kekuatan",
-    "tanggal": "2026-10-20",
+    "tanggal": "20 Oktober 2026",
     "durasi": 15,
     "kalori": 80
   },
@@ -67,7 +67,7 @@
     "id": "9",
     "judul": "Deadlift",
     "kategori": "Kekuatan",
-    "tanggal": "2026-10-21",
+    "tanggal": "21 Oktober 2026",
     "durasi": 35,
     "kalori": 220
   },
@@ -75,7 +75,7 @@
     "id": "10",
     "judul": "Pull up",
     "kategori": "Kekuatan",
-    "tanggal": "2026-10-22",
+    "tanggal": "22 Oktober 2026",
     "durasi": 15,
     "kalori": 90
   },
@@ -83,7 +83,7 @@
     "id": "11",
     "judul": "Lari interval",
     "kategori": "Kardio",
-    "tanggal": "2026-10-23",
+    "tanggal": "23 Oktober 2026",
     "durasi": 25,
     "kalori": 300
   },
@@ -91,7 +91,7 @@
     "id": "12",
     "judul": "Yoga",
     "kategori": "Fleksibilitas",
-    "tanggal": "2026-10-24",
+    "tanggal": "24 Oktober 2026",
     "durasi": 30,
     "kalori": 90
   },
@@ -99,7 +99,7 @@
     "id": "13",
     "judul": "Dips",
     "kategori": "Kekuatan",
-    "tanggal": "2026-10-25",
+    "tanggal": "25 Oktober 2026",
     "durasi": 15,
     "kalori": 95
   },
@@ -107,7 +107,7 @@
     "id": "14",
     "judul": "Pilates",
     "kategori": "Fleksibilitas",
-    "tanggal": "2026-10-26",
+    "tanggal": "26 Oktober 2026",
     "durasi": 35,
     "kalori": 130
   },
@@ -115,7 +115,7 @@
     "id": "15",
     "judul": "Lunges",
     "kategori": "Kekuatan",
-    "tanggal": "2026-10-27",
+    "tanggal": "27 Oktober 2026",
     "durasi": 20,
     "kalori": 120
   }
