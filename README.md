@@ -8,6 +8,8 @@
 | **Tema** | Jurnal Latihan Olahraga |
 | **Deployment** | https://arul-hue.github.io/uts-paw/ |
 
+## Screenshoot Aplikasi
+
 | Beranda                           | Koleksi                      | Detail                     |
 | --------------------------------- | ---------------------------- | -------------------------- |
 | ![Beranda](docs/beranda-docs.png) | ![Koleksi](docs/koleksi.png) | ![Detail](docs/detail.png) |
