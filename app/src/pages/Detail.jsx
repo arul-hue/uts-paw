@@ -1,15 +1,18 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import useKoleksi from "../hooks/useKoleksi.js";
+import PesanStatus from "../components/PesanStatus.jsx";
 import "./Detail.css";
 
 // semua hook dipanggil di awal komponen sebelum return bersyarat
 export default function Detail() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { items, loading, hapus } = useKoleksi();
+  const { items, loading, hapus, error } = useKoleksi();
+
+  if (loading || error) return <PesanStatus loading={loading} error={error} />;
+
   const item = items.find((i) => String(i.id) === id);
 
-  if (loading) return <p>Memuat data...</p>;
   if (!item) {
     return (
       <section>

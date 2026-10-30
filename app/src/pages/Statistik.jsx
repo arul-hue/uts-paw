@@ -1,8 +1,12 @@
 import useKoleksi from "../hooks/useKoleksi.js";
+import PesanStatus from "../components/PesanStatus.jsx";
 import "./Statistik.css";
 
 export default function Statistik() {
   const { items } = useKoleksi();
+
+  if (loading || error) return <PesanStatus loading={loading} error={error} />;
+
   const perKategori = items.reduce(
     (hitung, { kategori }) => ({
       ...hitung,
