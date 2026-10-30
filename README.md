@@ -1,5 +1,3 @@
-# Ujian Tengah Semester IF25-22014 Pengembangan Aplikasi Web
-
 # Atleticsz - Aplikasi Pencatatan Latihan Olahraga
 
 - Nama: Syahrul Afwan
