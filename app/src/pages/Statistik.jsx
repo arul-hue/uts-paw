@@ -3,7 +3,7 @@ import PesanStatus from "../components/PesanStatus.jsx";
 import "./Statistik.css";
 
 export default function Statistik() {
-  const { items } = useKoleksi();
+  const { items, loading, error } = useKoleksi();
 
   if (loading || error) return <PesanStatus loading={loading} error={error} />;
 
