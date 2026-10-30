@@ -1,3 +1,9 @@
+.judul-statistik {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
 .tabel-gulir {
   overflow-x: auto;
 }
@@ -6,6 +12,7 @@
   width: 100%;
   max-width: 480px;
   border-collapse: collapse;
+  margin: 0 auto;
 }
 
 .tabel-data th,
