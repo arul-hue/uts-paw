@@ -1,10 +1,12 @@
 # Atleticsz - Aplikasi Pencatatan Latihan Olahraga
 
-- Nama: Syahrul Afwan
-- NIM: 124140096
-- Kelas: RA
-- Tema: Jurnal Latihan Olahraga
-- Deployment: https://arul-hue.github.io/uts-paw/
+| | |
+|---|---|
+| **Nama** | Syahrul Afwan |
+| **NIM** | 124140096 |
+| **Kelas** | RA |
+| **Tema** | Jurnal Latihan Olahraga |
+| **Deployment** | https://arul-hue.github.io/uts-paw/ |
 
 | Beranda                           | Koleksi                      | Detail                     |
 | --------------------------------- | ---------------------------- | -------------------------- |
